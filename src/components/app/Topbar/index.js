@@ -7,6 +7,7 @@ import { Icon, Popover, Button, Position } from '@blueprintjs/core';
 
 import { changeTheme } from '../../../redux/modules/app/theme';
 
+import Logo from '../../../containers/common/Logo';
 import NavMenuDropdown from '../NavMenuDropdown';
 
 import * as routes from '../../../routes';
@@ -55,7 +56,9 @@ const Topbar = (props) => {
   return (
     <nav className="pt-navbar">
       <div className="pt-navbar-group pt-align-left">
-        <div className="pt-navbar-heading">{t('topbar.brand')}</div>
+        <div className="pt-navbar-heading">
+          <Logo small style={{ width: '32px' }} alt="To the moon"/>
+        </div>
         {renderNavItems()}
       </div>
       <div className="pt-navbar-group pt-align-right">

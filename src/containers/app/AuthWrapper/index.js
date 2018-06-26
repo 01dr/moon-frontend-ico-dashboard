@@ -3,6 +3,7 @@ import { translate } from 'react-i18next';
 import { connect } from 'react-redux';
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 
+import Logo from '../../common/Logo';
 import AuthTopbar from '../../auth/AuthTopbar';
 import SignIn from '../../auth/SignIn';
 import SignUp from '../../auth/SignUp';
@@ -16,7 +17,8 @@ class AuthWrapper extends Component {
       <div className={s.auth}>
         <AuthTopbar/>
         <div className={s.logo}>
-          {'>_ secret_tech'}
+          <Logo large alt="TO THE MOON"/>
+          <div>ICO Dashboard</div>
         </div>
         <Switch>
           <Route exact path="/auth/sign-in" component={SignIn}/>

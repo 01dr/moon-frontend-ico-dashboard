@@ -9,7 +9,6 @@ import Address from '../Address';
 import EnableTwoFactorAuthPopup from '../EnableTwoFactorAuthPopup';
 import DisableTwoFactorAuthPopup from '../DisableTwoFactorAuthPopup';
 import ChangeLanguage from '../ChangeLanguage';
-import Creds from '../../../components/dashboard/Creds';
 
 import s from './styles.scss';
 
@@ -29,7 +28,6 @@ class Settings extends Component {
 
         <div className={s.col}>
           <div className={s.widget}><Address/></div>
-          <div className={s.widget}><Creds/></div>
         </div>
 
         <ChangePasswordPopup />

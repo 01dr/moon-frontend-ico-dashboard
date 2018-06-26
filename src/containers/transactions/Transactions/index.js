@@ -5,7 +5,6 @@ import { NonIdealState } from '@blueprintjs/core';
 
 import { fetchTransactions } from '../../../redux/modules/transactions/transactions';
 
-import Creds from '../../../components/dashboard/Creds';
 import Transaction from '../../../components/transactions/Transaction';
 
 import s from './styles.scss';
@@ -66,9 +65,7 @@ class Transactions extends Component {
           </div>
         </div>
 
-        <div className={s.col}>
-          <div className={s.widget}><Creds/></div>
-        </div>
+        <div className={s.col}></div>
       </div>
     );
   }
