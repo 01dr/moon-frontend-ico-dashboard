@@ -16,12 +16,10 @@ const Logo = (props) => {
   const blackSmall = <img src={require('../../../assets/images/logo-black-small.svg')} {...restProps}/>;
   const blackLarge = <img src={require('../../../assets/images/logo-black-large.svg')} {...restProps}/>;
 
-  if (small && theme === THEMES.dark) return whiteSmall;
-  if (large && theme === THEMES.dark) return whiteLarge;
   if (small && theme === THEMES.light) return blackSmall;
   if (large && theme === THEMES.light) return blackLarge;
-
-  return null;
+  if (small && theme === THEMES.dark) return whiteSmall;
+  return whiteLarge;
 };
 
 export default connect((state) => ({ ...state.app.theme }))(Logo);
