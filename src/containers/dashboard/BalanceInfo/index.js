@@ -7,7 +7,8 @@ import { openMakeDepositPopup } from '../../../redux/modules/app/makeDepositPopu
 
 import Block from '../../../components/dashboard/Block';
 
-import { bigNum } from '../../../helpers/common/common';
+import { bigNum } from '../../../utils/numbers';
+import config from '../../../utils/config';
 
 const BalanceInfo = (props) => {
   const {
@@ -27,7 +28,7 @@ const BalanceInfo = (props) => {
 
       <Block
         label={t('balanceInfo.token')}
-        value={`${bigNum(tokenBalance, 2)} SPACE`}
+        value={`${bigNum(tokenBalance, 2)} ${config.tokenName}`}
         fetching={fetching}/>
 
       <Button

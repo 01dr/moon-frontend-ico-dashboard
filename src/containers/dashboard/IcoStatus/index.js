@@ -7,7 +7,8 @@ import Block from '../../../components/dashboard/Block';
 
 import { openMakeDepositPopup } from '../../../redux/modules/app/makeDepositPopup';
 
-import { bigNum } from '../../../helpers/common/common';
+import { bigNum } from '../../../utils/numbers';
+import config from '../../../utils/config';
 
 const IcoStatus = (props) => {
   const {
@@ -28,7 +29,7 @@ const IcoStatus = (props) => {
 
       <Block
         label={t('icoStatus.sold')}
-        value={`${bigNum(tokensSold, 0)} SPACE`}
+        value={`${bigNum(tokensSold, 0)} ${config.tokenName}`}
         fetching={fetching}/>
 
       <Block

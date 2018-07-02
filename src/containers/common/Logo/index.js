@@ -8,6 +8,7 @@ const Logo = (props) => {
     theme,
     small,
     large,
+    dispatch,
     ...restProps
   } = props;
 

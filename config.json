@@ -1,7 +1,7 @@
 {
   "companyName": "To the moon",
-  "tokenName": "SPACE",
-  "tokenSymbol": "SPC",
+  "tokenName": "TTM",
+  "tokenSymbol": "TTM",
   "etherscanUrl": "https://ropsten.etherscan.io",
   "landingPageDomain": "https://www.tothemoon.studio/",
   "domain": "http://ico.tothemoon.studio",
@@ -9,8 +9,8 @@
   "minEthContribution": "0.1",
   "referralMinEthContribution": "10",
 
-  "supportEmail": "support@secrettech.io",
-  "referralEmail": "partners@secrettech.io",
+  "supportEmail": "go@tothemoon.studio",
+  "referralEmail": "go@tothemoon.studio",
 
   "agreementDoc": "https://secretech.io/storage/agreement.pdf",
   "whitepaperDoc": "https://secretech.io/storage/whitepaper.pdf",

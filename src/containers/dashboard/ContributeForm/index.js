@@ -13,6 +13,7 @@ import VerifyBuyTokensPopup from '../VerifyBuyTokensPopup';
 
 import { ethContribute } from '../../../utils/validators';
 import { tokenCalc, isVerified } from '../../../utils/numbers';
+import config from '../../../utils/config';
 import s from './styles.scss';
 
 const cx = classnames.bind(s);
@@ -36,16 +37,10 @@ class ContributeForm extends Component {
       <div>
         <h2>{t('contributeForm.title')}</h2>
 
-        <div className={s.alerts}>
-          <Callout icon="code" intent={Intent.DANGER}>{t('contributeForm.test')}</Callout>
-          {!isVerified(kycStatus)
-            ? <Callout icon="warning-sign" intent={Intent.WARNING}>{t('contributeForm.kycAlert')}</Callout>
-            : null}
-        </div>
-
         <div>
           <Interpolate
             i18nKey="dashboard:contributeForm.description"
+            tokenName={config.tokenName}
             useDangerouslySetInnerHTML={true}/>
         </div>
 
@@ -93,6 +88,13 @@ class ContributeForm extends Component {
             </Button>
           </div>
         </form>
+
+        <div className={s.alerts}>
+          <Callout icon="code" intent={Intent.DANGER}>{t('contributeForm.test')}</Callout>
+          {!isVerified(kycStatus)
+            ? <Callout icon="warning-sign" intent={Intent.WARNING}>{t('contributeForm.kycAlert')}</Callout>
+            : null}
+        </div>
 
         <MnemonicPopup/>
         <VerifyBuyTokensPopup/>

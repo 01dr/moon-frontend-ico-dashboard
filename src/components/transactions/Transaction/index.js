@@ -5,6 +5,7 @@ import { translate } from 'react-i18next';
 
 import s from './styles.scss';
 import { shortAddress, etherscanLink } from '../../../utils/numbers';
+import config from '../../../utils/config';
 
 const Transaction = (props) => {
   const {
@@ -32,7 +33,7 @@ const Transaction = (props) => {
 
   const dir = () => (direction === 'out' ? t('tx.direction.out') : t('tx.direction.in'));
   const amount = () => (type === 'eth_transfer' ? ethAmount : tokenAmount);
-  const symbol = () => (type === 'eth_transfer' ? 'ETH' : 'SPACE');
+  const symbol = () => (type === 'eth_transfer' ? 'ETH' : config.tokenName);
 
   return skeleton
     ? (
